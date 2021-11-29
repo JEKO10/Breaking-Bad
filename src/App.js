@@ -1,5 +1,5 @@
 import { useGlobalContext } from "./context";
-import Categories from "./components/Categories";
+import Header from "./components/Header";
 
 function App() {
   const { data } = useGlobalContext();
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <main>
-      <Categories />
+      <Header />
     </main>
   );
 }
