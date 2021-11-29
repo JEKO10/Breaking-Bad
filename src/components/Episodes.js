@@ -3,7 +3,6 @@ import { useGlobalContext } from "../context";
 const Episodes = () => {
   const { isLoading, data } = useGlobalContext();
 
-  console.log(data);
   if (isLoading) {
     return <div className="loading"></div>;
   }
