@@ -1,3 +1,16 @@
+body {
+  background-color: #0c1d03;
+  color: #fff;
+}
+
+#logo {
+  height: 150px;
+}
+
+.characters img {
+  height: 500px;
+}
+
 .loading {
   width: 6rem;
   height: 6rem;

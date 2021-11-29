@@ -31,6 +31,10 @@ const Categories = () => {
       <button
         onClick={() => {
           setQuery("quotes");
+          setIsLoading(true);
+          if (data.length > 0) {
+            setIsLoading(false);
+          }
         }}
       >
         Quotes

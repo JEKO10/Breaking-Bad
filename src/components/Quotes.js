@@ -2,7 +2,6 @@ import { useGlobalContext } from "../context";
 
 const Quotes = () => {
   const { isLoading, data } = useGlobalContext();
-  console.log(data);
 
   if (isLoading) {
     return <div className="loading"></div>;
