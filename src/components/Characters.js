@@ -4,9 +4,6 @@ import { useGlobalContext } from "../context";
 const Characters = () => {
   const { isLoading, data } = useGlobalContext();
 
-  // only Breaking Bad characters
-  // const breakingBad = data.filter((char) => char.category === "Breaking Bad");
-
   if (isLoading) {
     return <div className="loading"></div>;
   }

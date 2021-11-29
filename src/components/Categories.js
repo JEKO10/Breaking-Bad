@@ -3,12 +3,14 @@ import { useGlobalContext } from "../context";
 
 const Categories = () => {
   const { setQuery, setIsLoading, data } = useGlobalContext();
+
   return (
     <section className="categories">
       <button
         onClick={() => {
           setQuery("characters");
-          if (data.length > 4) {
+          setIsLoading(true);
+          if (data.length > 0) {
             setIsLoading(false);
           }
         }}
@@ -18,6 +20,10 @@ const Categories = () => {
       <button
         onClick={() => {
           setQuery("episodes");
+          setIsLoading(true);
+          if (data.length > 0) {
+            setIsLoading(false);
+          }
         }}
       >
         Episodes
