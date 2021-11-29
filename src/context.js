@@ -5,10 +5,18 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [query, setQuery] = useState("");
-  const { isLoading, data } = useFetch(query);
+  const { isLoading, setIsLoading, data } = useFetch(`${query}`);
 
   return (
-    <AppContext.Provider value={{ isLoading, data, query, setQuery }}>
+    <AppContext.Provider
+      value={{
+        isLoading,
+        setIsLoading,
+        data,
+        query,
+        setQuery,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

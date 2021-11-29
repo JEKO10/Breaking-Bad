@@ -1,13 +1,13 @@
 import { useGlobalContext } from "./context";
 import Header from "./components/Header";
+import Characters from "./components/Characters";
 
 function App() {
-  const { data } = useGlobalContext();
-  console.log(data);
-
+  const { query } = useGlobalContext();
   return (
     <main>
       <Header />
+      {query === "characters" ? <Characters /> : ""}
     </main>
   );
 }

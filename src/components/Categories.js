@@ -2,12 +2,15 @@ import React from "react";
 import { useGlobalContext } from "../context";
 
 const Categories = () => {
-  const { setQuery } = useGlobalContext();
+  const { setQuery, setIsLoading, data } = useGlobalContext();
   return (
     <section className="categories">
       <button
         onClick={() => {
           setQuery("characters");
+          if (data.length > 4) {
+            setIsLoading(false);
+          }
         }}
       >
         Characters
