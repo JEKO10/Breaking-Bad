@@ -9,22 +9,35 @@ const Characters = () => {
   }
   return (
     <section className="characters">
-      {data
-        .filter((char) => char.category === "Breaking Bad")
-        .map((char) => {
-          return (
-            <div key={char.char_id}>
-              <img src={char.img} alt={char.name} />
-              <h1>{char.name}</h1>
-              <h2>Actor name: {char.portrayed}</h2>
-              <h2>Nickname: {char.nickname}</h2>
-              <h2>Birthday: {char.birthday}</h2>
-              <h2>Status: {char.status}</h2>
-              <h2>Occupation: {char.occupation.join(", ")}</h2>
-              <hr />
+      {data.map((char) => {
+        return (
+          <div key={char.char_id} className="card">
+            <div className="cardInner">
+              <div className="front">
+                <img src={char.img} alt={char.name} />
+              </div>
+              <div className="back">
+                <h1>{char.name}</h1>
+                <h4>
+                  <strong>Actor name:</strong> {char.portrayed}
+                </h4>
+                <h4>
+                  <strong>Nickname:</strong> {char.nickname}
+                </h4>
+                <h4>
+                  <strong>Birthday:</strong> {char.birthday}
+                </h4>
+                <h4>
+                  <strong>Status:</strong> {char.status}
+                </h4>
+                {/* <h4>
+                  <strong>Occupation:</strong> {char.occupation.join(", ")}
+                </h4> */}
+              </div>
             </div>
-          );
-        })}
+          </div>
+        );
+      })}
     </section>
   );
 };

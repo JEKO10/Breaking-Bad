@@ -4,8 +4,8 @@ import Categories from "./Categories";
 const Header = () => {
   return (
     <nav>
-      <Categories />
       {/* <img src={Logo} alt="Logo" id="logo" /> */}
+      <Categories />
     </nav>
   );
 };

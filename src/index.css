@@ -4,21 +4,23 @@
 }
 
 body {
-  background-color: #0c1d03;
+  background: #000 url("./bg.jpg") no-repeat center center/cover;
+  /* background-color: #0c1d03; */
   color: #fff;
-  font-family: "HeartBreakingBad";
+  height: 100vh;
 }
 
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 50px 0 50px;
+  flex-direction: column;
+  padding: 25px 50px 0 50px;
 }
 
-nav #logo {
-  height: 150px;
-}
+/* nav #logo {
+  height: 100px;
+} */
 
 .categories button {
   background-color: #34510f;
@@ -53,6 +55,7 @@ nav #logo {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: "HeartBreakingBad";
 }
 
 .landing h1 {
@@ -71,9 +74,71 @@ nav #logo {
   border-radius: 15px;
 }
 
-.characters img {
-  height: 500px;
+.characters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 5rem;
 }
+
+.card {
+  cursor: pointer;
+  background-color: transparent;
+  height: 300px;
+  perspective: 1000px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card h1 {
+  font-size: 25px;
+  border-bottom: 1px #fff solid;
+  padding-bottom: 10px;
+  margin: 15px 15px 10px 15px;
+  font-weight: 600;
+}
+
+.card h4 {
+  margin: 15px 5px;
+  padding: 0 10px;
+  font-weight: 400;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .cardInner {
+  transform: rotateY(180deg);
+}
+
+.back {
+  background-color: #333;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* favicon title */
 
 .loading {
   width: 6rem;
@@ -84,6 +149,24 @@ nav #logo {
   border: 3px solid #ccc;
   border-top-color: #016927;
   animation: spinner 0.6s linear infinite;
+}
+
+@media (max-width: 800px) {
+  .characters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .characters {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+  }
 }
 
 @keyframes spinner {
