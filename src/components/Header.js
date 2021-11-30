@@ -1,11 +1,11 @@
 import Categories from "./Categories";
-import Logo from "../Breaking_Bad_logo.svg.png";
+// import Logo from "../logo.png";
 
 const Header = () => {
   return (
     <nav>
-      <img src={Logo} alt="Logo" id="logo" />
       <Categories />
+      {/* <img src={Logo} alt="Logo" id="logo" /> */}
     </nav>
   );
 };

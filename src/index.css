@@ -1,10 +1,74 @@
+@font-face {
+  font-family: "HeartBreakingBad";
+  src: url("./Heart\ Breaking\ Bad.otf");
+}
+
 body {
   background-color: #0c1d03;
   color: #fff;
+  font-family: "HeartBreakingBad";
 }
 
-#logo {
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px 0 50px;
+}
+
+nav #logo {
   height: 150px;
+}
+
+.categories button {
+  background-color: #34510f;
+  color: #fff;
+  font-size: 3rem;
+  border: none;
+  margin: 0 20px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 500ms ease;
+  letter-spacing: 2px;
+}
+
+.categories button span {
+  background-color: #016927;
+  color: #fff;
+  margin: 0 2px;
+  padding: 0 10px;
+  letter-spacing: 0;
+  border: 1px solid #fff;
+  font-weight: 600;
+}
+
+.categories button:hover {
+  background-color: #fff;
+  color: #016927;
+}
+
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.landing h1 {
+  font-size: 4rem;
+  font-weight: 100;
+}
+
+.landing h1::first-letter,
+.landing h1 span {
+  color: #00a03b;
+  /* color: #016927; */
+}
+
+.landing #poster {
+  height: 500px;
+  border-radius: 15px;
 }
 
 .characters img {

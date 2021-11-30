@@ -15,7 +15,7 @@ const Categories = () => {
           }
         }}
       >
-        Characters
+        Char<span>Ac</span>ters
       </button>
       <button
         onClick={() => {
@@ -26,7 +26,7 @@ const Categories = () => {
           }
         }}
       >
-        Episodes
+        Eis<span>O</span>des
       </button>
       <button
         onClick={() => {
@@ -37,7 +37,7 @@ const Categories = () => {
           }
         }}
       >
-        Quotes
+        Quo<span>Te</span>s
       </button>
     </section>
   );

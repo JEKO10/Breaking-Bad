@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Characters from "./components/Characters";
 import Episodes from "./components/Episodes";
 import Quotes from "./components/Quotes";
+import Poster from "./poster.jpg";
 
 function App() {
   const { query } = useGlobalContext();
@@ -16,7 +17,12 @@ function App() {
       ) : query === "quotes" ? (
         <Quotes />
       ) : (
-        <h1>Choose a category</h1>
+        <div className="landing">
+          <h1>
+            Cho<span>OS</span>e a <span>C</span>ategor<span>Y</span>
+          </h1>
+          <img src={Poster} alt="Poster" id="poster" />
+        </div>
       )}
     </main>
   );
