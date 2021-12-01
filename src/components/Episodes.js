@@ -12,13 +12,18 @@ const Episodes = () => {
         .filter((ep) => ep.series === "Breaking Bad")
         .map((ep) => {
           return (
-            <div key={ep.episode_id}>
-              <h1>Title: {ep.title}</h1>
+            <div key={ep.episode_id} className="episode">
               <h1>
-                s{ep.season} e{ep.episode}
+                <strong>Title: </strong>
+                {ep.title}
               </h1>
-              <h1>Released: {ep.air_date}</h1>
-              <hr />
+              <h1>
+                S{ep.season} E{ep.episode}
+              </h1>
+              <h1>
+                <strong>Released: </strong>
+                {ep.air_date}
+              </h1>
             </div>
           );
         })}

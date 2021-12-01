@@ -74,7 +74,8 @@ nav {
   border-radius: 15px;
 }
 
-.characters {
+.characters,
+.episodes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
@@ -83,12 +84,35 @@ nav {
   margin-top: 5rem;
 }
 
-.card {
+.episodes {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.episodes .episode:last-of-type,
+.characters .card:last-of-type {
+  margin-bottom: 5rem;
+}
+
+.card,
+.episode {
   cursor: pointer;
   background-color: transparent;
   height: 300px;
   perspective: 1000px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.episode {
+  cursor: auto;
+  background-color: #34510f;
+  text-align: center;
+  height: 150px;
+  transition: all 1s ease;
+}
+
+.episode:hover {
+  color: #34510f;
+  background-color: #fff;
 }
 
 .card h1 {
@@ -99,7 +123,8 @@ nav {
   font-weight: 600;
 }
 
-.card h4 {
+.card h4,
+.episode h1 {
   margin: 15px 5px;
   padding: 0 10px;
   font-weight: 400;
