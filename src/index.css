@@ -7,7 +7,7 @@ body {
   background: #000 url("./bg.jpg") no-repeat center center/cover;
   /* background-color: #0c1d03; */
   color: #fff;
-  height: 100vh;
+  height: 90vh;
 }
 
 nav {
@@ -70,7 +70,10 @@ nav {
 }
 
 .landing #poster {
-  height: 500px;
+  /* height: 500px; */
+  width: 60%;
+  height: auto;
+  object-fit: cover;
   border-radius: 15px;
 }
 
@@ -115,10 +118,8 @@ input {
 .episodes,
 .quotes {
   grid-template-columns: repeat(2, 1fr);
-}
-
-.quotes {
   margin-top: 5rem;
+  padding: 0 30px;
 }
 
 .episodes .episode:last-of-type,
@@ -142,18 +143,18 @@ input {
   cursor: auto;
   background-color: #34510f;
   text-align: center;
-  height: 150px;
+  height: fit-content;
   transition: all 1s ease;
+}
+
+.quote {
+  height: 200px;
 }
 
 .episode:hover,
 .quote:hover {
   color: #34510f;
   background-color: #fff;
-}
-
-.quote {
-  height: 200px;
 }
 
 .quote h1 {
@@ -227,13 +228,33 @@ input {
   animation: spinner 0.6s linear infinite;
 }
 
+@media (max-width: 992px) {
+  .quote {
+    height: fit-content;
+  }
+
+  .landing #poster {
+    width: 90%;
+  }
+}
+
 @media (max-width: 800px) {
   .characters {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .episodes,
+  .quotes {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media (max-width: 500px) {
+  .landing h1 {
+    font-size: 2.5rem;
+    /* font-weight: 100; */
+  }
+
   .characters {
     grid-template-columns: 1fr;
   }

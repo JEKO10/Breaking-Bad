@@ -8,13 +8,7 @@ const Header = () => {
   return (
     <nav>
       <Categories />
-      {query === "characters" ? (
-        <SearchForm />
-      ) : query === "episodes" ? (
-        <SearchForm />
-      ) : (
-        ""
-      )}
+      {query === "characters" ? <SearchForm /> : ""}
     </nav>
   );
 };

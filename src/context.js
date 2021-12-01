@@ -7,6 +7,7 @@ const AppProvider = ({ children }) => {
   const [query, setQuery] = useState("");
   const [search, setSearch] = useState("");
   const { isLoading, setIsLoading, data } = useFetch(`${query}?name=${search}`);
+
   return (
     <AppContext.Provider
       value={{
