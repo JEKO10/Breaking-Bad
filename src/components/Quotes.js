@@ -12,10 +12,9 @@ const Quotes = () => {
         .filter((quote) => quote.series === "Breaking Bad")
         .map((quote) => {
           return (
-            <div key={quote.quote_id}>
+            <div key={quote.quote_id} className="quote">
               <h1>{quote.quote}</h1>
               <p>{quote.author}</p>
-              <hr />
             </div>
           );
         })}

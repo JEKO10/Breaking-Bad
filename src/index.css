@@ -75,7 +75,8 @@ nav {
 }
 
 .characters,
-.episodes {
+.episodes,
+.quotes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
@@ -84,17 +85,20 @@ nav {
   margin-top: 5rem;
 }
 
-.episodes {
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .episodes .episode:last-of-type,
-.characters .card:last-of-type {
+.characters .card:last-of-type,
+.quotes .quote:last-of-type {
   margin-bottom: 5rem;
 }
 
+.episodes,
+.quotes {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .card,
-.episode {
+.episode,
+.quote {
   cursor: pointer;
   background-color: transparent;
   height: 300px;
@@ -102,7 +106,8 @@ nav {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.episode {
+.episode,
+.quote {
   cursor: auto;
   background-color: #34510f;
   text-align: center;
@@ -110,9 +115,24 @@ nav {
   transition: all 1s ease;
 }
 
-.episode:hover {
+.episode:hover,
+.quote:hover {
   color: #34510f;
   background-color: #fff;
+}
+
+.quote {
+  height: 200px;
+}
+
+.quote h1 {
+  font-weight: 500;
+  padding: 10px 20px;
+}
+
+.quote p {
+  text-align: start;
+  padding: 0 20px;
 }
 
 .card h1 {
