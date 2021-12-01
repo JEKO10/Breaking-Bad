@@ -5,8 +5,8 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [query, setQuery] = useState("");
-  const { isLoading, setIsLoading, data } = useFetch(`${query}`);
-
+  const [search, setSearch] = useState("");
+  const { isLoading, setIsLoading, data } = useFetch(`${query}?name=${search}`);
   return (
     <AppContext.Provider
       value={{
@@ -15,6 +15,8 @@ const AppProvider = ({ children }) => {
         data,
         query,
         setQuery,
+        search,
+        setSearch,
       }}
     >
       {children}

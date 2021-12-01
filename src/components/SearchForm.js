@@ -1,14 +1,14 @@
 import { useGlobalContext } from "../context";
 
 function SearchForm() {
-  const { query, setQuery } = useGlobalContext();
+  const { search, setSearch } = useGlobalContext();
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <input
         type="text"
-        value={query}
+        value={search}
         onChange={(e) => {
-          setQuery(e.target.value);
+          setSearch(e.target.value);
         }}
       />
     </form>

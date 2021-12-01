@@ -7,6 +7,7 @@ import Poster from "./poster.jpg";
 
 function App() {
   const { query } = useGlobalContext();
+
   return (
     <main>
       <Header />

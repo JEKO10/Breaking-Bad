@@ -9,6 +9,7 @@ const Characters = () => {
   }
   return (
     <section className="characters">
+      {data.length === 0 ? <h1 id="empty">No Items!</h1> : ""}
       {data.map((char) => {
         return (
           <div key={char.char_id} className="card">

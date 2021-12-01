@@ -2,7 +2,7 @@ import React from "react";
 import { useGlobalContext } from "../context";
 
 const Categories = () => {
-  const { setQuery, setIsLoading, data } = useGlobalContext();
+  const { setQuery, setIsLoading, data, setSearch } = useGlobalContext();
 
   return (
     <section className="categories">
@@ -13,6 +13,7 @@ const Categories = () => {
           if (data.length > 0) {
             setIsLoading(false);
           }
+          setSearch("");
         }}
       >
         Char<span>Ac</span>ters
