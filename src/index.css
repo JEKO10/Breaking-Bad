@@ -73,7 +73,6 @@ nav {
 .landing h1::first-letter,
 .landing h1 span {
   color: #00a03b;
-  /* color: #016927; */
 }
 
 .landing #poster {
@@ -221,8 +220,6 @@ input {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-
-/* favicon title */
 
 .loading {
   width: 6rem;
